@@ -1,0 +1,42 @@
+package com.java2blog.top100javacodinginterview;
+
+public class StringAnagramMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String chuoi = "java2blog";
+		String dao_chuoi = "aj2vabgol";
+		
+		System.out.println(chuoi + " and " + dao_chuoi + " are anagram: " + isAnagramUsingStringMethods(chuoi, dao_chuoi));
+
+	}
+	
+	
+	// Tạo method isAnagramUsingStringMethods params là 2 chuỗi kết quả trả về true false
+	public static boolean isAnagramUsingStringMethods(String word, String anagram) {
+		if(word.length() != anagram.length())
+			return false;
+		
+		for(int i = 0; i < word.length(); i++) {
+			char c = word.charAt(i);
+			// test
+			System.out.println("Gia chi cua c tai vi tri i " + i + " la : " + c);
+			
+			int index = anagram.indexOf(c);
+			//test
+			System.out.println("Gia tri index, tuc vi tri cua " + c + " trong " + anagram + " : " + index);
+			
+			if (index != -1) {
+				System.out.println(anagram);
+				anagram = anagram.substring(0, index) + anagram.substring(index + 1, anagram.length());
+				System.out.println(anagram);
+			} else {
+				return false;
+			}
+		}
+		
+		// sau khi chạy hết vòng lập, ktra xem chuỗi anagram còn ko? nếu ko thì return true, tức method anagram này là đúng
+		return anagram.isEmpty();
+	}
+
+}

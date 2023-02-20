@@ -1,0 +1,35 @@
+package com.java2blog.top100javacodinginterview;
+
+public class StringAnagramMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	// Tạo method isAnagramUsingStringMethods params là 2 chuỗi kết quả trả về true false
+	public static boolean isAnagramUsingStringMethods(String word, String anagram) {
+		if(word.length() != anagram.length())
+			return false;
+		
+		for(int i = 0; i < word.length(); i++) {
+			char c = word.charAt(i);
+			// test
+			System.out.println(c);
+			
+			int index = anagram.indexOf(c);
+			//test
+			System.out.println(index);
+			
+			if (index != -1) {
+				anagram = anagram.substring(0, index) + anagram.substring(index + 1, anagram.length());
+			} else {
+				return false;
+			}
+		}
+		
+		return anagram.isEmpty();
+	}
+
+}

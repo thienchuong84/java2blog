@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+D:\TU_HOC_CODES\java2blog\.metadata\.plugins\org.eclipse.jdt.core
+3154022747.index
+1865797976.index
+4244614499.index
+1319718268.index
+1256674099.index
+3413725848.index

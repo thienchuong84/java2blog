@@ -1,0 +1,14 @@
+package com.java2blog.top100javacodinginterview;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String blogName = "java2blog";
+		
+		System.out.Println(blogName);
+
+	}
+
+}
